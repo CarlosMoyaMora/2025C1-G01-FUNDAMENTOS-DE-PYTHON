@@ -1,11 +1,9 @@
-try:
-    precio_producto = float(input('favor ingrece el precio de el primer producto'))    
-    while (precio_producto):
-        nuevo_prod = str(input('Si desea ingresar un nuevo producto escriba si, de los contrario escriba no'))
-        if nuevo_prod != 'si' .lower:
-            while (nuevo_prod):
-                nuevo_precio = float(input('ingrese el precio'))
-            break
-    print('gracias por su compra')           
-except ValueError:
-    print('Error: por favor ingrese un valor numerico correcto.')
+ENTRADAS
+print('porfavor ingrese un numero para mostrar su tabla del uno al 10')
+numero_usuario = int(input())
+multiplicacion = 5
+#PROCESO
+while(numero_usuario):
+   if multiplicacion < 0 and multiplicacion <= 10:
+            operacion = numero_usuario * multiplicacion
+            print(f'{numero_usuario} x {multiplicacion} = {operacion}')
