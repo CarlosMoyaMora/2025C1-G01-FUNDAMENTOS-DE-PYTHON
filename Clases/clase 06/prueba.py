@@ -7,6 +7,9 @@ while(precio_producto):
          nuevo_precio = float(input('Ingrese el precio de el nuevo articulo'))
          suma_productos = precio_producto + nuevo_precio
          precio_producto = suma_productos
+
+print(f'el total final es de {precio_producto}')
+      
       
                
 
