@@ -60,4 +60,21 @@ def guardar_ventas(ventas):
 def analisis_ventas():
     df = pd.read_csv('ventas.csv')
     print('\n------------- RESUMEN DE VENTAS-------------')
+    
+    df['subtotal'] = df['cantidad'] * df['precio']
+    total_ingresos = df['subtotal'].sum()
+    
+    print(f'Total de ventas {total_ingresos}')
+    
+    #curso mas vendido
+    
+    top_curso = df.groupby('curso')['cantidad'].sum().idxmax()
+    print(f'El curso mas vendido es : {top_curso}')
+    
+    # clente top
+    top_cliente = df.groupby('cliente')['cantidad'].sum().idxmax()
+    print(f'El cliente top es {top_cliente}')
+    
+    top_dia = df.groupby('fecha')['cantidad'].sum().idxmax()
+    print(f'la fecha en la que mas se vendio es {top_dia}')
                             

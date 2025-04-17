@@ -6,7 +6,7 @@ Sistema de Gestion de ventas Que permita ingresar, almacenar y analizar datos
 """
 import os
 
-from modulo import ingresar_ventas, guardar_ventas, guardar_ventas
+from modulo import ingresar_ventas, guardar_ventas, guardar_ventas, analisis_ventas
 
 
 def limpiar_pantalla():# esta funcion limpia la terminal en ejecucion.
@@ -41,7 +41,9 @@ def menu():
             guardar_ventas(ventas)
             pausar()
         elif opcion == '3':
+            limpiar_pantalla()
             print('\n--- Analisis de Ventas---')
+            analisis_ventas()
             pausar()
         elif opcion == '4':
             print('\n--- Gracias por usar el sistema. Hasta pronto!')
@@ -60,7 +62,6 @@ if __name__ == '__main__':
     print('Bienvenido al sistema de Gestion de Ventas')
     
     ventas = []
-    
     
     pausar()
     menu()
