@@ -6,7 +6,7 @@ Sistema de Gestion de ventas Que permita ingresar, almacenar y analizar datos
 """
 import os
 
-from modulo import ingresar_ventas
+from modulo import ingresar_ventas, guardar_ventas
 
 
 def limpiar_pantalla():# esta funcion limpia la terminal en ejecucion.
@@ -24,7 +24,7 @@ def menu():
     while True:
         print('\n---- Menu Principal ----')
         print('1. Ingresar Ventas de cursos UMCA')
-        print('2. Guardar datos en un archivo Csv')
+        print('2. Guardar datos en un archivo CSV')
         print('3. Analizar las ventas')
         print('4. Salir')
         opcion = input('Ingrese una opcion: ')
@@ -36,7 +36,9 @@ def menu():
             pausar()
             
         elif opcion == '2':
+            limpiar_pantalla
             print('\n---Guardar Ventas en CSV')
+            guardar_ventas(ventas)
             pausar()
         elif opcion == '3':
             print('\n--- Analisis de Ventas---')

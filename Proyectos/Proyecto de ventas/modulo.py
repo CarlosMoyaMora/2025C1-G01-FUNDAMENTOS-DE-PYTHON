@@ -1,5 +1,7 @@
 # archivo para almacenar
 # Funciones que quiero reutilizar a Futuro
+import csv
+
 
 def ingresar_ventas(lista_ventas):
     while True:
@@ -33,3 +35,12 @@ def ingresar_ventas(lista_ventas):
             break   
         else:
             print('Opcion no valida')
+            
+def guardar_ventas(ventas):
+    if not ventas:
+        print('No hay ventas que guardar en el CSV')
+    else:
+        with open('ventas.csv', 'w', newline=' ', encoding='utf-8') as archivo:
+            guardar = csv.DictWriter(archivo, fieldnames=['curso','cantidad', 'precio','fecha','cliente']) 
+            guardar.writeheader()
+            guardar.writerows(ventas)                   
