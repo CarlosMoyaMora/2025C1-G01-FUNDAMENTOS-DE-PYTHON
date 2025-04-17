@@ -6,7 +6,7 @@ Sistema de Gestion de ventas Que permita ingresar, almacenar y analizar datos
 """
 import os
 
-from modulo import ingresar_ventas, guardar_ventas
+from modulo import ingresar_ventas, guardar_ventas, guardar_ventas
 
 
 def limpiar_pantalla():# esta funcion limpia la terminal en ejecucion.
